@@ -57,19 +57,19 @@ class heat_client(object):
         self.client = _heatclient.Client(self.dict.get('api_version'), endpoint, **kwargs)
 
     def stacks_list(self):
-    	return [stack for stack in self.client.stacks.list()]
+        return [stack for stack in self.client.stacks.list()]
 
 
     def stack_delete(self, stack_id):
-    	return self.client.stacks.delete(stack_id)
+        return self.client.stacks.delete(stack_id)
 
     
     def stack_get(self, stack_id):
-    	return self.client.stacks.get(stack_id)
+        return self.client.stacks.get(stack_id)
 
 
     def stack_create(self, **kwargs):
-    	return self.client.stacks.create(**kwargs)
+        return self.client.stacks.create(**kwargs)
 
 
     def events_list(self, stack_name):
